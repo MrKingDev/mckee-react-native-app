@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "mckee-react-native-app",
+    "slug": "mckee-react-native-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "mckee-react-native-app"
+}
