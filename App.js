@@ -3,6 +3,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Screens
@@ -14,6 +15,8 @@ import ShopScreen from './screens/ShopScreen';
 
 // Variables
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
+
 
 export default function App() {
   return (

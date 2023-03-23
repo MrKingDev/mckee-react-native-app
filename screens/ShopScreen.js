@@ -1,22 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-
-// Screens
-import MainShopScreen from './shopScreens/MainShopScreen';
-import MerchSc6reen from './shopScreens/MerchScreen';
-6
-// Variables
-const Drawer = createDrawerNavigator();
-
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 
 export default function ShopScreen() {
     return (
-        <Drawer.Navigator>
-            <Drawer.Screen name="Main Shop" component={MainShopScreen}/>
-            <Drawer.Screen name="Merch" component={MerchSc6reen}/>
-        </Drawer.Navigator>
+        <View>
+            <TouchableOpacity>
+                <Image source={'../assets/images/McKee_Hat.png'}></Image>
+                <View>
+                    <Text>Name of Product</Text>
+                    <Text>Price of Product</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
     );
 }
 
