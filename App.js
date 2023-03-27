@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { BlurView } from 'expo-blur';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Screens
@@ -48,6 +49,7 @@ export default function App() {
         inactiveBackgroundColor: '#086300',
         activeBackgroundColor: '#064700',
         // tabStyle: {height: 60},
+        
       }}
       >
         <Tab.Screen name='Home' component={HomeScreen}/>

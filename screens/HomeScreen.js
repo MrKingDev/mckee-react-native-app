@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, Dimensions, ScrollView } from 'react-native';
 
 export default function HomeScreen() {
+
     return (
-    <View style={styles.container}>
-        <Text style={{fontSize:25, fontWeight:'bold'}}>Home</Text>
-    </View>
+        <SafeAreaView>
+            <Text>App</Text>
+        </SafeAreaView>
     );
 }
 
@@ -17,4 +18,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     },
+
+    wrapDot: {
+        position: 'absolute',
+        bottom: 0,
+        flexDirection: 'row',
+        alignSelf: 'center'
+    }
 });

@@ -1,17 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+
+
 
 export default function ShopScreen() {
+
     return (
         <View>
-            <TouchableOpacity>
-                <Image source={'../assets/images/McKee_Hat.png'}></Image>
-                <View>
-                    <Text>Name of Product</Text>
-                    <Text>Price of Product</Text>
-                </View>
-            </TouchableOpacity>
+            <Text>
+                Bruh
+            </Text>
         </View>
     );
 }
