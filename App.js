@@ -3,7 +3,6 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import { BlurView } from 'expo-blur';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -16,13 +15,13 @@ import ShopScreen from './screens/ShopScreen';
 
 // Variables
 const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
-
 
 export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={({ route }) => ({
+        headerShown: false,
+
         tabBarIcon: ({ focused, size, color }) => {
           let iconName;
 
@@ -40,7 +39,9 @@ export default function App() {
 
           return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
         }
-      })}
+      })
+      
+      }
 
       tabBarOptions= {{
         activeTintColor: 'yellow',
@@ -48,8 +49,7 @@ export default function App() {
         labelStyle: { fontSize: 13, fontWeight: 'bold' },
         inactiveBackgroundColor: '#086300',
         activeBackgroundColor: '#064700',
-        // tabStyle: {height: 60},
-        
+        // tabStyle: {height: 60}
       }}
       >
         <Tab.Screen name='Home' component={HomeScreen}/>

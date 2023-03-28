@@ -1,17 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-
+import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
+import SlideShow from '../data/SlideShow';
+import Slider from '../components/Slider';
 
 export default function ShopScreen() {
 
     return (
-        <View>
-            <Text>
-                Bruh
-            </Text>
-        </View>
+        <SafeAreaView>
+            <View>
+                <FlatList data={SlideShow}
+                renderItem={({item}) => <Slider item={item}/>}
+                // horizontal
+                // pagingEnabled
+                // snapToAlignment='center'
+                />
+            </View>
+        </SafeAreaView>
     );
 }
 

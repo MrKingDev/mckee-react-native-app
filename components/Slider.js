@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, Dimensions, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, FlatList } from 'react-native';
 
-export default function HomeScreen() {
+export default function Slider({item}) {
+
     return (
-        <View style={styles.container}>
-            <Text style={{fontSize:25, fontWeight:'bold'}}>Home Page</Text>
+        <View>
+            <Image source={item.img} resizeMode='contain' style={styles.image}/>
         </View>
     );
 }
@@ -17,4 +18,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     },
+
+    image: {
+        width: '100%',
+    }
 });
