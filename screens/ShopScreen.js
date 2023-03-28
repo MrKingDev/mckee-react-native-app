@@ -11,9 +11,6 @@ export default function ShopScreen() {
             <View>
                 <FlatList data={SlideShow}
                 renderItem={({item}) => <Slider item={item}/>}
-                // horizontal
-                // pagingEnabled
-                // snapToAlignment='center'
                 />
             </View>
         </SafeAreaView>
