@@ -5,16 +5,15 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 export default function Slider({item, onPress}) {
 
     return (
-        
-        <View style={{padding: 20}}>
-            <TouchableOpacity style={styles.card} onPress={onPress}>
-                <Image source={item.img} style={styles.thumb}/>
+            <View style={{padding: 20}}>
+                <TouchableOpacity style={styles.card} onPress={onPress}>
+                    <Image source={item.img} style={styles.thumb}/>
 
-                <View style={styles.infoContainer}>
-                    <Text style={styles.name}>{item.name}</Text>
-                    <Text style={styles.price}>${item.price}</Text>
-                </View> 
-            </TouchableOpacity>
+                    <View style={styles.infoContainer}>
+                        <Text style={styles.name}>{item.name}</Text>
+                        <Text style={styles.price}>${item.price}</Text>
+                    </View> 
+                </TouchableOpacity>
         </View>
 
         // <View style={styles.container}>
@@ -29,22 +28,6 @@ export default function Slider({item, onPress}) {
 }
 
 const styles = StyleSheet.create({
-    // container: {
-    // alignItems: 'center',
-    // },
-
-    // image: {
-    //     width: '100%',
-    // },
-
-    // content: {
-    //     alignItems: 'center'
-    // },
-
-    // name: {
-    //     fontSize: 24,
-    //     fontWeight: 'bold'
-    // }
 
     card: {
         backgroundColor: 'white',

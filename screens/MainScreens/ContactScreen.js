@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function SocialsScreen() {
+export default function ContactScreen() {
     return (
     <View style={styles.container}>
         <Text style={{fontSize:25, fontWeight:'bold'}}>Socials</Text>

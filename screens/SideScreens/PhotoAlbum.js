@@ -1,19 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Navigation from './components/navigation/navigation';
 
-export default function App() {
-  return (
-    <Navigation/>
-  );
+export default function PhotoAlbum(){
+    return(
+        <View style={styles.container}>
+            <Text style={{fontSize:25, fontWeight:'bold'}}>Photo Album</Text>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    },
 });

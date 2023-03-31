@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
-import SlideShow from '../data/SlideShow';
-import Slider from '../components/Slider';
+
+import SlideShow from '../../data/SlideShow';
+import Slider from '../../components/Slider';
 
 export default function ShopScreen() {
 
@@ -12,6 +13,10 @@ export default function ShopScreen() {
                 <FlatList data={SlideShow}
                 renderItem={({item}) => <Slider item={item}/>}
                 />
+            </View>
+
+            <View>
+                <Text>Section 2</Text>
             </View>
         </SafeAreaView>
     );
