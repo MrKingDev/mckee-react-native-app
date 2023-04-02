@@ -2,20 +2,21 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
 
-import SlideShow from '../../data/SlideShow';
-import Slider from '../../components/Slider';
+
+import MerchData from '../../data/ShopData/MerchData';
+import MerchDisplay from '../../components/Shop/MerchDisplay';
 
 export default function ShopScreen() {
 
     return (
         <SafeAreaView>
             <View>
-                <FlatList data={SlideShow}
-                renderItem={({item}) => <Slider item={item}/>}
+                <FlatList data={MerchData}
+                renderItem={({item}) => <MerchDisplay item={item}/>}
                 />
             </View>
 
-            <View>
+            <View style={{padding:20}}>
                 <Text>Section 2</Text>
             </View>
         </SafeAreaView>

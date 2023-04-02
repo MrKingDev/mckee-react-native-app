@@ -1,29 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function Slider({item, onPress}) {
+export default function MerchDisplay({item, onPress}) {
 
     return (
-            <View style={{padding: 20}}>
+            <ScrollView style={{flex: 1, padding: 15}} showsVerticalScrollIndicator={false}>
                 <TouchableOpacity style={styles.card} onPress={onPress}>
-                    <Image source={item.img} style={styles.thumb}/>
+                        <Image source={item.img} style={styles.thumb}/>
 
-                    <View style={styles.infoContainer}>
-                        <Text style={styles.name}>{item.name}</Text>
-                        <Text style={styles.price}>${item.price}</Text>
-                    </View> 
+                        <View style={styles.infoContainer}>
+                            <Text style={styles.name}>{item.name}</Text>
+                            <Text style={styles.price}>${item.price}</Text>
+                        </View> 
                 </TouchableOpacity>
-        </View>
-
-        // <View style={styles.container}>
-        //     <Image source={item.img} resizeMode='contain' style={styles.image}/>
-
-        //     <View style={styles.content}>
-        //         <Text style={styles.name}>{item.name}</Text>
-        //         <Text style={styles.price}>${item.price}</Text>
-        //     </View>
-        // </View>
+            </ScrollView>
     );
 }
 
@@ -47,7 +38,8 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 16,
         borderTopRightRadius: 16,
         alignSelf: 'center',
-        width: '85%',
+        width: '100%',
+        resizeMode: 'contain'
     },
     infoContainer: {
         padding: 23,
