@@ -54,8 +54,8 @@ function TabNav(){
             >
             <Tab.Screen name='Hub' component={DrawerNav} options={{ headerShown: false }}/>
             <Tab.Screen name='News' component={NewsScreen}/>
-            <Tab.Screen name='Contact' component={ContactScreen}/>
             <Tab.Screen name='Resources' component={ResourceScreen}/>
+            <Tab.Screen name='Contact' component={ContactScreen}/>
         </Tab.Navigator>
     )
 }
@@ -79,3 +79,15 @@ export default function Navigation(){
         </NavigationContainer>
     )
 }
+
+
+const styles = StyleSheet.create({
+    navIndex: {
+        width:90,
+        height:2,
+        backgroundColor:'white',
+        position: 'absolute',
+        bottom:47,
+        borderRadius: '50%'
+    }
+});
