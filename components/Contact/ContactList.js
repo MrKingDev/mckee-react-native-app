@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactListData from '../../data/ShopData/ContactListData';
+import ContactListData from '../../data/ContactListData';
 import { Email } from 'react-native-openanything';
 import {
   StyleSheet,
