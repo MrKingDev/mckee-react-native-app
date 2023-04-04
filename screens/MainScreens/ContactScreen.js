@@ -5,10 +5,7 @@ import ContactList from '../../components/Contact/ContactList';
 
 export default function ContactScreen() {
     return (
-    <View style={styles.container}>
-        <Text style={{fontSize:25, fontWeight:'bold'}}>Socials</Text>
         <ContactList/>
-    </View>
     );
 }
 

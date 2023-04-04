@@ -7,6 +7,7 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <Text style={{fontSize:25, fontWeight:'bold'}}>Home Page</Text>
             <Text>Welcome!</Text>
+            <Text>v0.0.1</Text>
         </View>
     );
 }
