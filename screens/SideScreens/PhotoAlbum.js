@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function PhotoAlbum(){
     return(
         <View style={styles.container}>
-            <Text style={{fontSize:25, fontWeight:'bold'}}>Photo Album</Text>
+            <Text style={{fontSize:25, fontWeight:'bold'}}>Photo Avlumm</Text>
         </View>
     )
 }
