@@ -9,7 +9,6 @@ import {
   SafeAreaView,
   ScrollView,
   Image,
-  Linking,
 } from 'react-native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 

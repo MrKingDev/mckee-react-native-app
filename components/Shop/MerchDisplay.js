@@ -2,11 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function MerchDisplay({item, onPress}) {
+export default function MerchDisplay({item}) {
 
     return (
             <ScrollView style={{flex: 1, padding: 15}} showsVerticalScrollIndicator={false}>
-                <TouchableOpacity style={styles.card} onPress={onPress}>
+                <TouchableOpacity style={styles.card}  onPress={() => { /* Import onPress Here */ }}>
                         <Image source={item.img} style={styles.thumb}/>
 
                         <View style={styles.infoContainer}>
