@@ -65,13 +65,12 @@ function TabNav(){
 function DrawerNav(){
     return(
         <Drawer.Navigator>
-            <Drawer.Screen name='Home' component={HomeScreen}/>
-            <Drawer.Screen name='Shop' component={ShopScreen}/>
-            <Drawer.Screen name='Photo Album' component={PhotoAlbum}/>
+            <Drawer.Screen name='Home' component={HomeScreen}/> 
+           <Drawer.Screen name='Shop' component={ShopScreen}/>
+            <Drawer.Screen name='Photo Album' component={PhotoAlbum}/> 
         </Drawer.Navigator>
     )
 }
-
 export default function Navigation(){
     return(
         <NavigationContainer>
