@@ -17,6 +17,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import ShopScreen from '../../screens/SideScreens/ShopScreen';
 import PhotoAlbum from '../../screens/SideScreens/PhotoAlbum';
 
+    import NewsPage from '../News/NewsPage';
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -75,8 +77,15 @@ export default function Navigation(){
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='BottomNav' component={TabNav} />
+                <Stack.Screen name='NewsPage' component={NewsPage} />
             </Stack.Navigator>
         </NavigationContainer>
+    )
+}
+
+function NewsPageShow(){
+    return(
+        <Stack.Screen name='NewsPage' component={NewsPage} />
     )
 }
 

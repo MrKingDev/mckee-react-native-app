@@ -4,15 +4,18 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, SafeAreaView, FlatList
 
 import NewsData from '../../data/NewsData/NewsData';
 import NewsPage from '../../components/News/NewsPage';
+import { useNavigation } from '@react-navigation/native';
 
 export default function NewsList() {
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView>
                     <FlatList data={NewsData}
                         renderItem={({ item }) => (
                             <ScrollView style={{padding: 20}}>
                                 <TouchableOpacity style={styles.card} onPress={() => {
-                                    <NewsPage/>
+                                    navigation.navigate('NewsPage')
                                 }}>
                                     <Image style={styles.image} source={item.img}/>
                                     <View style={styles.flex}>
