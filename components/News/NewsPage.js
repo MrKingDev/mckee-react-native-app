@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, FlatList, ScrollView, Button } from 'react-native';
+import { Divider } from '@rneui/themed';
 
 import NewsData from '../../data/NewsData/NewsData';
 import { useNavigation } from '@react-navigation/native';
@@ -29,6 +30,7 @@ export default function NewsPage() {
                                 <View style={styles.description}>
                                     <Text>{item.description}</Text>
                                 </View>
+                                <Divider/>
                             </ScrollView>
                         )}
                     />

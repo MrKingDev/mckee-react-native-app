@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, SafeAreaView, FlatList, ScrollView } from 'react-native';
-
 import NewsData from '../../data/NewsData/NewsData';
 import NewsPage from '../../components/News/NewsPage';
 import { useNavigation } from '@react-navigation/native';
