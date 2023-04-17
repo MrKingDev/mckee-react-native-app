@@ -1,28 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, FlatList, ScrollView, Button } from 'react-native';
 
 import NewsData from '../../data/NewsData/NewsData';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function NewsPage() {
+    const navigation = useNavigation();
     return (
     
 
     <SafeAreaView>
-                <FlatList data={NewsData}
-                    renderItem={({ item }) => (
-                        <ScrollView style={{padding: 20}}>
-                            <Image style={styles.image} source={item.img}/>
-                            <View style={styles.flex}>
-                                <Text style={styles.title}>{item.title}</Text>
-                                <Text style={styles.author}>{item.author}</Text>
-                            </View>
-                            <View style={styles.description}>
-                                <Text>{item.description}</Text>
-                            </View>
-                        </ScrollView>
-                    )}
-                />
+                <View style={{ padding:20}}>
+                    <Button title="Back" onPress={() => {
+                        navigation.navigate('News')
+                    }}></Button>
+                </View>
+                <View>
+                    <FlatList style={{backgroundColor: 'white'}} data={NewsData}
+                        renderItem={({ item }) => (
+                            <ScrollView style={{padding: 20}}>
+                                <Image style={styles.image} source={item.img}/>
+                                <View style={styles.flex}>
+                                    <Text style={styles.title}>{item.title}</Text>
+                                    <Text style={styles.author}>{item.author}</Text>
+                                </View>
+                                <View style={styles.description}>
+                                    <Text>{item.description}</Text>
+                                </View>
+                            </ScrollView>
+                        )}
+                    />
+                </View>
     </SafeAreaView>
     );
 }
